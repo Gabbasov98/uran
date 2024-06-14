@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=9133eb49-3a97-4b2d-90be-6b80a97a5036"></script>
+    <title>Партнеры</title>
+</head>
+
+
+<body class="m-page">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="" class="header__logo">
+                        <svg width="75" height="81" viewBox="0 0 75 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.58478 75.8909L0 62.6716H4.30513L8.71246 71.6356L13.1931 62.6716H17.4747L8.5631 80.4974H4.23176L6.58478 75.8909Z" fill="#183D8B" />
+                            <path d="M20.4043 62.6742H28.4905C32.5467 62.6742 36.0002 65.7294 36.0002 69.7097C36.0002 73.6401 32.5703 76.7451 28.4905 76.7451H24.2587V80.5H20.4043V62.6742ZM28.4643 72.9876C30.5684 72.9876 32.1694 71.46 32.1694 69.707C32.1694 67.9541 30.4662 66.4264 28.3647 66.4264H24.2587V72.985H28.4643V72.9876Z" fill="#183D8B" />
+                            <path d="M44.0866 62.6742H47.6921L55.553 80.5H51.371L50.446 78.4457H41.3091L40.4339 80.5H36.252L44.0866 62.6742ZM48.9184 74.7642L45.8894 67.4798L42.8603 74.7642H48.9184Z" fill="#183D8B" />
+                            <path d="M58.3809 62.6742H62.2353V69.6337H70.7984V62.6742H74.6293V80.5H70.7984V73.4409H62.2353V80.5H58.3809V62.6742Z" fill="#183D8B" />
+                            <path class="_not-fill" d="M47.4316 10.2422H50.7777V6.31965L47.4316 4.38588V11.4423V10.2422Z" fill="#FF1010" />
+                            <path class="_not-fill" d="M54.1426 8.26128V10.2422H57.4887V10.1951L54.1426 8.26128Z" fill="#FF1010" />
+                            <path class="_not-fill" d="M44.0492 10.3942V2.43377L40.7031 0.5V10.2422H44.0492V10.3942Z" fill="#FF1010" />
+                            <path d="M57.4899 10.2422H54.1438V40.3074L37.7801 49.7535L21.5343 40.3755V21.8737L24.8987 19.9294V38.4942H24.9642L24.9511 38.5151L37.7827 45.9227L37.7958 45.9017L50.7269 38.4365L50.7138 38.4129H50.7793V10.2422H47.4332V36.4713L37.7696 42.0499L28.2448 36.5525V17.9983L31.6276 16.0462V34.6057L31.6355 34.6083L31.6302 34.6161L37.7774 38.1666L37.7853 38.1535L44.0478 34.5375L44.0425 34.5271H44.0504V10.2422H40.7043V32.6038L37.7696 34.2965L34.9737 32.6824V10.2422L33.2863 11.2301L33.2836 11.2248L18.1882 19.9399H18.1855V42.2988H18.1934L18.1855 42.3067L37.7748 53.6158L37.7774 53.6211L37.7801 53.6185L37.7879 53.6237L37.7958 53.6106L57.4899 42.2386L57.4794 42.2176H57.4899V10.2422Z" fill="#183D8B" />
+                        </svg>
+                    </a>
+
+                    <a href="mailto:info@uran.group" class="header__email text20 blue-link">
+                        info@uran.group
+                    </a>
+
+                    <button class="_toggle-menu burger m-btn-light-blue">
+                        <svg class="_view1" width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1.5H25M1.00043 9.5H16.8182M1 17.5H25" stroke="#183D8B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <svg class="_view2" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 0.5L1 16.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 0.5L17 16.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="sticky-menu">
+                <button class="sticky-menu__search _toggle-menu">
+                    <img class="_view1" src="img/search-icon2.svg" alt="">
+                    <img class="_view2" src="img/close.svg" alt="">
+                </button>
+                <button class="burger _toggle-menu m-btn-light-blue">
+                    <svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1.5H25M1.00043 9.5H16.8182M1 17.5H25" stroke="#183D8B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="lang">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 11C21 16.5228 16.5228 21 11 21M21 11C21 5.47715 16.5228 1 11 1M21 11H1M11 21C5.47715 21 1 16.5228 1 11M11 21C9.02573 19.1878 7.66667 15.3908 7.66667 11C7.66667 6.60923 9.02573 2.81215 11 1M11 21C12.9743 19.1878 14.3333 15.3908 14.3333 11C14.3333 6.60923 12.9743 2.81215 11 1M1 11C1 5.47715 5.47715 1 11 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>RU</span>
+                </div>
+            </div>
+
+            <div class="menu">
+                <div class="menu__wrap">
+                    <div class="container">
+                        <div class="menu__inner">
+                            <div class="search-field fg">
+                                <input type="text" placeholder="Поиск">
+                                <img src="img/search-icon.svg" alt="" class="search-field__icon">
+                            </div>
+                            <nav class="nav">
+                                <ul>
+                                    <li><a href="">О компании</a></li>
+                                    <li><a href="">Инновации и технологии</a></li>
+                                    <li><a href="">Продукты</a></li>
+                                    <li><a href="">Партнеры</a></li>
+                                    <li><a href="">Команда</a></li>
+                                    <li><a href="">Устойчивое развитие</a></li>
+                                    <li><a href="">Новости</a></li>
+                                    <li><a href="">Вакансии</a></li>
+                                    <li><a href="">Контакты</a></li>
+                                    <li><a href="">Проекты</a></li>
+                                </ul>
+                            </nav>
+                            <div class="menu-contacts">
+                                <div class="menu-contacts__item">
+                                    <div class="menu-contacts__item-title text20">
+                                        Наш адрес:
+                                    </div>
+                                    <div class="menu-contacts__item-desc text20">
+                                        Lorem ipsum dolor sit amet
+                                    </div>
+                                </div>
+                                <div class="menu-contacts__item">
+                                    <div class="menu-contacts__item-title text20">
+                                        Телефон:
+                                    </div>
+                                    <div class="menu-contacts__item-desc text20">
+                                        <a href="tel:+79001234567">+7 900 123 45 67</a>
+                                    </div>
+                                </div>
+                                <div class="menu-contacts__item">
+                                    <div class="menu-contacts__item-title text20">
+                                        E-mail:
+                                    </div>
+                                    <div class="menu-contacts__item-desc text20">
+                                        <a href="mailto:example@gmail.com">example@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+        <main class="content">
+
+            <div class="page-top">
+                <div class="container">
+                    <ul class="breadcrumbs">
+                        <li><a href="">Главная</a></li>
+                        <li><a>Партнеры</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-top m-section m-section--first">
+                <div class="container">
+                    <div class="project-top__info">
+                        <div class="project-top__info-col">
+                            <h1 class="h1">
+                                <span class="_view1">
+                                    Наши <span class="primary-text">партнеры</span>
+                                </span>
+                                <span class="_view2">
+                                    Партнеры
+                                </span>
+                            </h1>
+                        </div>
+                        <div class="project-top__info-col">
+                            <div class="project-top__desc">
+                                <div class="text20">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="partners__items">
+                        <div class="partner-item">
+                            <img src="img/partner.webp" alt="">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/partner2.webp" alt="">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/partner3.webp" alt="">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/partner4.webp" alt="">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/partner5.webp" alt="">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/partner6.webp" alt="">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/partner7.webp" alt="">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/partner8.webp" alt="">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/partner9.webp" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-top__inner">
+                        <div class="footer-top__col">
+                            <a href="" class="footer__logo">
+                                <img src="img/logo2.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="footer-top__col2">
+                            <div class="footer-contacts">
+                                <div class="footer__title">
+                                    Контакты
+                                </div>
+                                <div class="footer-contacts__grid">
+                                    <div class="footer-contacts__col">
+                                        <div class="menu-contacts__item">
+                                            <div class="menu-contacts__item-title text20">
+                                                Наш адрес:
+                                            </div>
+                                            <div class="menu-contacts__item-desc text20">
+                                                Lorem ipsum dolor sit amet
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer-contacts__col">
+                                        <div class="menu-contacts__item">
+                                            <div class="menu-contacts__item-title text20">
+                                                Телефон:
+                                            </div>
+                                            <div class="menu-contacts__item-desc text20">
+                                                <a href="tel:+79001234567">+7 900 123 45 67</a>
+                                            </div>
+                                        </div>
+                                        <div class="menu-contacts__item">
+                                            <div class="menu-contacts__item-title text20">
+                                                E-mail:
+                                            </div>
+                                            <div class="menu-contacts__item-desc text20">
+                                                <a href="mailto:example@gmail.com">example@gmail.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <div class="container">
+                    <div class="footer-middle__inner">
+                        <div class="footer-middle__col">
+                            <div class="footer-nav">
+                                <div class="footer__title">
+                                    О компании
+                                </div>
+                                <div class="footer-nav__links">
+                                    <ul>
+                                        <li><a href="">Инновации и технологии</a></li>
+                                        <li><a href="">Проекты</a></li>
+                                        <li><a href="">Продукты</a></li>
+                                        <li><a href="">Партнеры</a></li>
+                                        <li><a href="">Команда</a></li>
+                                        <li><a href="">Развитие</a></li>
+                                        <li><a href="">Новости</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-middle__col2">
+                            <div class="footer-nav">
+                                <div class="footer__title">
+                                    Карьера
+                                </div>
+                                <div class="footer-nav__links _col1">
+                                    <ul>
+                                        <li><a href="">Вакансии</a></li>
+                                        <li><a href="">Контакты</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom__inner">
+                        <div class="footer-bottom__item">
+                            <a href="">Пользовательское соглашение</a>
+                        </div>
+                        <div class="footer-bottom__item">
+                            Copyright
+                        </div>
+                        <div class="footer-bottom__item">
+                            <a href="">Политика конфиденциальности</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
