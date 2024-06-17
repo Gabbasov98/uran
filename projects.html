@@ -58,12 +58,12 @@
                         <path d="M1 1.5H25M1.00043 9.5H16.8182M1 17.5H25" stroke="#183D8B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
-                <div class="lang">
+                <a href="" class="lang">
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 11C21 16.5228 16.5228 21 11 21M21 11C21 5.47715 16.5228 1 11 1M21 11H1M11 21C5.47715 21 1 16.5228 1 11M11 21C9.02573 19.1878 7.66667 15.3908 7.66667 11C7.66667 6.60923 9.02573 2.81215 11 1M11 21C12.9743 19.1878 14.3333 15.3908 14.3333 11C14.3333 6.60923 12.9743 2.81215 11 1M1 11C1 5.47715 5.47715 1 11 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     <span>RU</span>
-                </div>
+                </a>
             </div>
 
             <div class="menu">
@@ -258,14 +258,14 @@
                             let myMap = new ymaps.Map("map", {
                                 center: coord,
                                 zoom: 5,
-                                controls: [],
+                                controls: ['zoomControl'],
                             });
 
                             let placeMarks = [
 
                             ]
 
-                            // myMap.behaviors.disable('scrollZoom');
+                            myMap.behaviors.disable('scrollZoom');
 
                             mapPoints.forEach((el, index) => {
                                 let placeMark = new ymaps.Placemark(el.cords, {
@@ -298,8 +298,34 @@
                                     iconImageOffset: [-9, -9],
                                     hideIconOnBalloonOpen: false,
                                 });
+
+                                placeMark.events
+                                    .add('click', function(e) {
+
+                                    })
+
+                                myMap.geoObjects.events
+
+                                    .add('balloonopen', function(e) {
+                                        e.get('target').options.set('iconLayout', 'default#imageWithContent');
+                                        e.get('target').options.set('iconImageSize', [40, 40]);
+                                        e.get('target').options.set('iconImageOffset', [-20, -20]);
+                                        e.get('target').options.set('iconImageHref', 'img/marker2.svg');
+
+                                    })
+
+                                    .add('balloonclose', function(e) {
+                                        e.get('target').options.set('iconLayout', 'default#imageWithContent');
+                                        e.get('target').options.set('iconImageSize', [18, 18]);
+                                        e.get('target').options.set('iconImageOffset', [-9, -9]);
+                                        e.get('target').options.set('iconImageHref', 'img/marker.svg');
+                                    });
+
                                 myMap.geoObjects.add(placeMark);
                                 placeMarks.push(placeMark)
+
+
+
 
                             })
 
@@ -318,16 +344,16 @@
                 <div class="container">
                     <div class="projects__grid">
                         <div class="project-card">
-                            <div class="project-card__img m-backdrop">
+                            <a href="" class="_scale-img project-card__img m-backdrop">
                                 <img src="img/project3.jpg" alt="">
-                            </div>
+                            </a>
                             <div class="project-card__badge m-badge">
                                 <span class="text20">Локация</span>
                             </div>
                             <div class="project-card__content">
                                 <div class="project-card__info">
                                     <div class="project-card__title h2">
-                                        Заголовок проекта
+                                        <a href="">Заголовок проекта</a>
                                     </div>
                                     <div class="project-card__desc text20">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
@@ -342,16 +368,16 @@
                         </div>
 
                         <div class="project-card">
-                            <div class="project-card__img m-backdrop">
+                            <a href="" class="_scale-img project-card__img m-backdrop">
                                 <img src="img/project3.jpg" alt="">
-                            </div>
+                            </a>
                             <div class="project-card__badge m-badge">
                                 <span class="text20">Локация</span>
                             </div>
                             <div class="project-card__content">
                                 <div class="project-card__info">
                                     <div class="project-card__title h2">
-                                        Заголовок проекта
+                                        <a href="">Заголовок проекта</a>
                                     </div>
                                     <div class="project-card__desc text20">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
@@ -366,16 +392,16 @@
                         </div>
 
                         <div class="project-card">
-                            <div class="project-card__img m-backdrop">
+                            <a href="" class="_scale-img project-card__img m-backdrop">
                                 <img src="img/project3.jpg" alt="">
-                            </div>
+                            </a>
                             <div class="project-card__badge m-badge">
                                 <span class="text20">Локация</span>
                             </div>
                             <div class="project-card__content">
                                 <div class="project-card__info">
                                     <div class="project-card__title h2">
-                                        Заголовок проекта
+                                        <a href="">Заголовок проекта</a>
                                     </div>
                                     <div class="project-card__desc text20">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
@@ -390,16 +416,16 @@
                         </div>
 
                         <div class="project-card">
-                            <div class="project-card__img m-backdrop">
+                            <a href="" class="_scale-img project-card__img m-backdrop">
                                 <img src="img/project3.jpg" alt="">
-                            </div>
+                            </a>
                             <div class="project-card__badge m-badge">
                                 <span class="text20">Локация</span>
                             </div>
                             <div class="project-card__content">
                                 <div class="project-card__info">
                                     <div class="project-card__title h2">
-                                        Заголовок проекта
+                                        <a href="">Заголовок проекта</a>
                                     </div>
                                     <div class="project-card__desc text20">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
@@ -414,16 +440,16 @@
                         </div>
 
                         <div class="project-card">
-                            <div class="project-card__img m-backdrop">
+                            <a href="" class="_scale-img project-card__img m-backdrop">
                                 <img src="img/project3.jpg" alt="">
-                            </div>
+                            </a>
                             <div class="project-card__badge m-badge">
                                 <span class="text20">Локация</span>
                             </div>
                             <div class="project-card__content">
                                 <div class="project-card__info">
                                     <div class="project-card__title h2">
-                                        Заголовок проекта
+                                        <a href="">Заголовок проекта</a>
                                     </div>
                                     <div class="project-card__desc text20">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
@@ -438,16 +464,16 @@
                         </div>
 
                         <div class="project-card">
-                            <div class="project-card__img m-backdrop">
+                            <a href="" class="_scale-img project-card__img m-backdrop">
                                 <img src="img/project3.jpg" alt="">
-                            </div>
+                            </a>
                             <div class="project-card__badge m-badge">
                                 <span class="text20">Локация</span>
                             </div>
                             <div class="project-card__content">
                                 <div class="project-card__info">
                                     <div class="project-card__title h2">
-                                        Заголовок проекта
+                                        <a href="">Заголовок проекта</a>
                                     </div>
                                     <div class="project-card__desc text20">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
@@ -462,16 +488,16 @@
                         </div>
 
                         <div class="project-card">
-                            <div class="project-card__img m-backdrop">
+                            <a href="" class="_scale-img project-card__img m-backdrop">
                                 <img src="img/project3.jpg" alt="">
-                            </div>
+                            </a>
                             <div class="project-card__badge m-badge">
                                 <span class="text20">Локация</span>
                             </div>
                             <div class="project-card__content">
                                 <div class="project-card__info">
                                     <div class="project-card__title h2">
-                                        Заголовок проекта
+                                        <a href="">Заголовок проекта</a>
                                     </div>
                                     <div class="project-card__desc text20">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
@@ -486,16 +512,16 @@
                         </div>
 
                         <div class="project-card">
-                            <div class="project-card__img m-backdrop">
+                            <a href="" class="_scale-img project-card__img m-backdrop">
                                 <img src="img/project3.jpg" alt="">
-                            </div>
+                            </a>
                             <div class="project-card__badge m-badge">
                                 <span class="text20">Локация</span>
                             </div>
                             <div class="project-card__content">
                                 <div class="project-card__info">
                                     <div class="project-card__title h2">
-                                        Заголовок проекта
+                                        <a href="">Заголовок проекта</a>
                                     </div>
                                     <div class="project-card__desc text20">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
@@ -510,16 +536,16 @@
                         </div>
 
                         <div class="project-card">
-                            <div class="project-card__img m-backdrop">
+                            <a href="" class="_scale-img project-card__img m-backdrop">
                                 <img src="img/project3.jpg" alt="">
-                            </div>
+                            </a>
                             <div class="project-card__badge m-badge">
                                 <span class="text20">Локация</span>
                             </div>
                             <div class="project-card__content">
                                 <div class="project-card__info">
                                     <div class="project-card__title h2">
-                                        Заголовок проекта
+                                        <a href="">Заголовок проекта</a>
                                     </div>
                                     <div class="project-card__desc text20">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida

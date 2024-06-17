@@ -58,12 +58,12 @@
                         <path d="M1 1.5H25M1.00043 9.5H16.8182M1 17.5H25" stroke="#183D8B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
-                <div class="lang">
+                <a href="" class="lang">
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 11C21 16.5228 16.5228 21 11 21M21 11C21 5.47715 16.5228 1 11 1M21 11H1M11 21C5.47715 21 1 16.5228 1 11M11 21C9.02573 19.1878 7.66667 15.3908 7.66667 11C7.66667 6.60923 9.02573 2.81215 11 1M11 21C12.9743 19.1878 14.3333 15.3908 14.3333 11C14.3333 6.60923 12.9743 2.81215 11 1M1 11C1 5.47715 5.47715 1 11 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     <span>RU</span>
-                </div>
+                </a>
             </div>
 
             <div class="menu">
@@ -832,14 +832,14 @@
                             let myMap = new ymaps.Map("map", {
                                 center: coord,
                                 zoom: 5,
-                                controls: [],
+                                controls: ['zoomControl'],
                             });
 
                             let placeMarks = [
 
                             ]
 
-                            // myMap.behaviors.disable('scrollZoom');
+                            myMap.behaviors.disable('scrollZoom');
 
                             mapPoints.forEach((el, index) => {
                                 let placeMark = new ymaps.Placemark(el.cords, {
@@ -872,8 +872,34 @@
                                     iconImageOffset: [-9, -9],
                                     hideIconOnBalloonOpen: false,
                                 });
+
+                                placeMark.events
+                                    .add('click', function(e) {
+
+                                    })
+
+                                myMap.geoObjects.events
+
+                                    .add('balloonopen', function(e) {
+                                        e.get('target').options.set('iconLayout', 'default#imageWithContent');
+                                        e.get('target').options.set('iconImageSize', [40, 40]);
+                                        e.get('target').options.set('iconImageOffset', [-20, -20]);
+                                        e.get('target').options.set('iconImageHref', 'img/marker2.svg');
+
+                                    })
+
+                                    .add('balloonclose', function(e) {
+                                        e.get('target').options.set('iconLayout', 'default#imageWithContent');
+                                        e.get('target').options.set('iconImageSize', [18, 18]);
+                                        e.get('target').options.set('iconImageOffset', [-9, -9]);
+                                        e.get('target').options.set('iconImageHref', 'img/marker.svg');
+                                    });
+
                                 myMap.geoObjects.add(placeMark);
                                 placeMarks.push(placeMark)
+
+
+
 
                             })
 
@@ -1022,7 +1048,7 @@
                     </div>
                     <div class="last-news__grid">
                         <div class="last-news__col">
-                            <div class="news-card2 ">
+                            <a href="" class="news-card2  _scale-img">
                                 <div class="news-card2__img m-backdrop">
                                     <img src="img/news5.webp" alt="">
                                 </div>
@@ -1057,7 +1083,7 @@
                                         </button>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
 
                         </div>
                         <div class="last-news__col2">
@@ -1192,7 +1218,7 @@
                 </div>
             </div>
 
-            <div class="consult m-section">
+            <div class="consult m-section _blue">
                 <div class="container">
                     <div class="m-section__grid consult__grid">
                         <div class="consult__col">
@@ -1244,7 +1270,7 @@
 
             </div>
 
-            <div class="contacts m-section">
+            <div class="contacts m-section _white">
                 <div class="container">
                     <div class="m-section__grid consult__grid">
                         <div class="contacts__col">
